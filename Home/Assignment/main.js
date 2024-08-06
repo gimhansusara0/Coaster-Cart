@@ -1,5 +1,6 @@
 console.log("Starting System")
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let favouriteItems = JSON.parse(localStorage.getItem('favouriteItems')) || [];
 
 const products = [
     {name: "Avocado", pricePerKg: 640},
@@ -17,7 +18,6 @@ function addToCart(productIndex){
         alert("Enter a valid number");
         return;
     }
-
     const product = {
         name: products[productIndex].name,
         amount: amount,
@@ -37,7 +37,7 @@ function addToCart(productIndex){
 function updateCartTable(){
     const tbody = document.getElementById("cart-table").getElementsByTagName('tbody')[0];
     tbody.innerHTML = ''
- 
+    let total = 0;
     cart.forEach((item, index) => {
         const row = tbody.insertRow();
         row.insertCell(0).innerHTML = item.name;
@@ -47,10 +47,15 @@ function updateCartTable(){
         row.insertCell(3).innerText = item.total.toFixed(2);
         const favouriteCell = row.insertCell(4);
         favouriteCell.innerHTML = `<input type="checkbox" ${item.favorite ? 'checked' : ''} onchange="toggleFavorite(${index})">`;
+        total += item.total;
+        
     });
+
+    console.log(total);
+    const rowTwo = tbody.insertRow();
+    rowTwo.insertCell(0).innerText = "TOTAL";
+    rowTwo.insertCell(1).innerText = `${total}`;
 }
-
-
 
 function updateAmount(index, newAmount){
     const amount = parseFloat(newAmount);
