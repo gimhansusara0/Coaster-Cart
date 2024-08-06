@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="main">
+        <!-- Navigation pannel -->
+        <section class="navigation">
+            <h1>COASTER<span>.</span></h1>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="showFruit()" id="fruit-btn">Fruits</a></li>
+                <li><a href="javascript:void(0);" onclick="showVeges()" id="vege-btn">Veges</a></li>
+                <li><a href="javascript:void(0);" onclick="showDairy()" id="dairy-btn">Dairy</a></li>
+                <li><a href="javascript:void(0);" onclick="showMeat()" id="meat-btn">Meat</a></li>
+                <li><a href="javascript:void(0);" onclick="showBaking()" id="baking-btn">Baking</a></li>
+            </ul>
+            <article class="foot">
+                <p>©️2024 Coaster.</p>
+            </article>
+        </section>
+
+        <!-- Product Pannel -->
+         <section class="product-container">
+
+            <article class="name-container">
+                <h1 id="fruit-head">Fruits</h1>
+                <h1 id="vege-head">Vegetables</h1>
+                <h1 id="dairy-head">Dairy</h1>
+                <h1 id="meat-head">Meat</h1>
+                <h1 id="baking-head">Baking</h1>
+            </article>
+            <!-- Fruits container -->
+            <article class="fruits container" id="fruits">
+                <article class="row">
+                    <article class="img"><img src="./Img/fruits/avocado.jpg" alt="Avocado"></article>
+                    <article class="name">Avocado</article>
+                    <article class="price"><p>Rs.640(500g)</p></article>
+                    <article class="quantity">
+                        <label for="amount-0">Amount (kg):</label>
+                        <input type="number" id="amount-0" step="0.1">
+                    </article>
+                    <article class="add">
+                        <button onclick="addToCart(0)" class="cart-btn"><span class="material-symbols-outlined icon">
+                            add_shopping_cart
+                            </span></button>
+                    </article>
+                </article>
+
+                <article class="row">
+                    <article class="img"><img src="./Img/fruits/banana.jpg" alt="Banana"></article>
+                    <article class="name">Banana</article>
+                    <article class="price"><p>Rs.200(500g)</p></article>
+                    <article class="quantity">
+                        <label for="amount-1">Amount (kg):</label>
+                        <input type="number" id="amount-1" step="0.1">
+                    </article>
+                    <article class="add">
+                        <button onclick="addToCart(1)" class="cart-btn"><span class="material-symbols-outlined icon">
+                            add_shopping_cart
+                            </span></button>
+                    </article>
+                </article>
+
+
+                <article class="row">
+                    <article class="img"><img src="./Img/fruits/grapes.jpg" alt="Grapes"></article>
+                    <article class="name">Grapes</article>
+                    <article class="price"><p>Rs.640(500g)</p></article>
+                    <article class="quantity">
+                        <label for="amount-2">Amount (kg):</label>
+                        <input type="number" id="amount-2" step="0.1">
+                    </article>
+                    <article class="add">
+                        <button onclick="addToCart(2)" class="cart-btn"><span class="material-symbols-outlined icon">
+                            add_shopping_cart
+                            </span></button>
+                    </article>
+                </article>
+
+
+                <article class="row">
+                    <article class="img"><img src="./Img/fruits/Orange.jpg" alt="Orange"></article>
+                    <article class="name">Orange</article>
+                    <article class="price"><p>Rs.450(500g)</p></article>
+                    <article class="quantity">
+                        <label for="amount-3">Amount (kg):</label>
+                        <input type="number" id="amount-3" step="0.1">
+                    </article>
+                    <article class="add">
+                        <button onclick="addToCart(3)" class="cart-btn"><span class="material-symbols-outlined icon">
+                            add_shopping_cart
+                            </span></button>
+                    </article>
+                </article>
+
+
+                <article class="row">
+                    <article class="img"><img src="./Img/fruits/papaya.jpg" alt="Papaya"></article>
+                    <article class="name">Papaya</article>
+                    <article class="price"><p>Rs.640(500g)</p></article>
+                    <article class="quantity">
+                        <label for="amount-4">Amount (kg):</label>
+                        <input type="number" id="amount-4" step="0.1">
+                    </article>
+                    <article class="add">
+                        <button onclick="addToCart(4)" class="cart-btn"><span class="material-symbols-outlined icon">
+                            add_shopping_cart
+                            </span></button>
+                    </article>
+                </article>
+
+                <article class="row">
+                    <article class="img"><img src="./Img/fruits/water-melon.jpg" alt="Water Melon"></article>
+                    <article class="name">Water Melon</article>
+                    <article class="price"><p>Rs.640(500g)</p></article>
+                    <article class="quantity">
+                        <label for="amount-5">Amount (kg):</label>
+                        <input type="number" id="amount-5" step="0.1">
+                    </article>
+                    <article class="add">
+                        <button onclick="addToCart(5)" class="cart-btn"><span class="material-symbols-outlined icon">
+                            add_shopping_cart
+                            </span></button>
+                    </article>
+                </article>
+
+
+
+            </article>
+
+            <!-- Vegetables container -->
+            <article class="vegetables container" id="vegetables">
+                    <article class="row">
+                        <article class="img"><img src="./Img/Veges/carrots.jpg" alt="carrots"></article>
+                        <article class="name">Carrots</article>
+                        <article class="price"><p>Rs.640(500g)</p></article>
+                        <article class="quantity">
+                            <label for="amount-6">Amount (kg):</label>
+                            <input type="number" id="amount-6" step="0.1">
+                        </article>
+                        <article class="add">
+                            <button onclick="addToCart(6)" class="cart-btn"><span class="material-symbols-outlined icon">
+                                add_shopping_cart
+                                </span></button>
+                        </article>
+                    </article>
+    
+                    <article class="row">
+                        <article class="img"><img src="./Img/Veges/onions.jpg" alt="Onions"></article>
+                        <article class="name">Onions</article>
+                        <article class="price"><p>Rs.200(500g)</p></article>
+                        <article class="quantity">
+                            <label for="amount-7">Amount (kg):</label>
+                            <input type="number" id="amount-7" step="0.1">
+                        </article>
+                        <article class="add">
+                            <button onclick="addToCart(7)" class="cart-btn"><span class="material-symbols-outlined icon">
+                                add_shopping_cart
+                                </span></button>
+                        </article>
+                    </article>
+    
+    
+                    <article class="row">
+                        <article class="img"><img src="./Img/Veges/potatos.jpg" alt="Potatos"></article>
+                        <article class="name">Potatos</article>
+                        <article class="price"><p>Rs.640(500g)</p></article>
+                        <article class="quantity">
+                            <label for="amount-8">Amount (kg):</label>
+                            <input type="number" id="amount-8" step="0.1">
+                        </article>
+                        <article class="add">
+                            <button onclick="addToCart(8)" class="cart-btn"><span class="material-symbols-outlined icon">
+                                add_shopping_cart
+                                </span></button>
+                        </article>
+                    </article>
+    
+    
+                    <article class="row">
+                        <article class="img"><img src="./Img/Veges/pumpkins.jpg" alt="Pumpkins"></article>
+                        <article class="name">Pumpkins</article>
+                        <article class="price"><p>Rs.450(500g)</p></article>
+                        <article class="quantity">
+                            <label for="amount-9">Amount (kg):</label>
+                            <input type="number" id="amount-9" step="0.1">
+                        </article>
+                        <article class="add">
+                            <button onclick="addToCart(9)" class="cart-btn"><span class="material-symbols-outlined icon">
+                                add_shopping_cart
+                                </span></button>
+                        </article>
+                    </article>
+    
+    
+                    <article class="row">
+                        <article class="img"><img src="./Img/Veges/tomatos.jpg" alt="Tomatos"></article>
+                        <article class="name">Tomatos</article>
+                        <article class="price"><p>Rs.640(500g)</p></article>
+                        <article class="quantity">
+                            <label for="amount-10">Amount (kg):</label>
+                            <input type="number" id="amount-10" step="0.1">
+                        </article>
+                        <article class="add">
+                            <button onclick="addToCart(10)" class="cart-btn"><span class="material-symbols-outlined icon">
+                                add_shopping_cart
+                                </span></button>
+                        </article>
+                    </article>
+    
+    
+    
+                </article>
+            </article>
+
+            <!-- Dairy container -->
+            <article class="dairy container" id="dairy"></article>
+
+            <!-- Meat container -->
+            <article class="meat container" id="meat"></article>
+
+            <!-- Baking products container -->
+            <article class="baking container" id="baking"></article>
+         </section>
+
+         <a href="javascript:void(0)" onclick="showTable()" class="table-btn">TABLE</a>
+         <section class="table" id="tab">
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Amount (kg)</th>
+                        <th>Price ($)</th>
+                        <th>Total ($)</th>
+                        <th>Favorite</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+         </section>
+      
+    </section>
+</body>
+</html>
